@@ -1,12 +1,10 @@
-Kirbey Aldair García Hernandez
-(https://github.com/Kaher19/OAW2021/blob/master/assets/KirbeyGarcia.jpeg)
+<h1 align="center">Integrantes del equipo</h1>
 
-Oscar Omar Perera Perez
-![Oscar Omar Perera Perez]
-(https://github.com/Kaher19/OAW2021/blob/master/assets/OscarPerera.jpeg)
-
-Shirla Pamela Santana Perez
-(https://github.com/Kaher19/OAW2021/blob/master/assets/ShirlaSantana.jpeg)
-
-Zeus Jhonatan Sarmiento Serrano
-(https://github.com/Kaher19/OAW2021/blob/master/assets/ZeusSarmiento.jpeg)
+<h5>- Kirbey Aldair García Hernandez</h5>
+<img style="width : 100px" src="https://raw.githubusercontent.com/Kaher19/OAW2021/master/assets/KirbeyGarcia.jpeg">
+<h5>- Oscar Omar Perera Perez</h5>
+<img style="width : 100px" src="https://raw.githubusercontent.com/Kaher19/OAW2021/master/assets/OscarPerera.jpeg">
+<h5>- Shirla Pamela Santana Perez</h5>
+<img style="width : 100px" src="https://raw.githubusercontent.com/Kaher19/OAW2021/master/assets/ShirlaSantana.jpeg">
+<h5>- Zeus Jhonatan Sarmiento Serrano</h5>
+<img style="width: 100px" src="https://raw.githubusercontent.com/Kaher19/OAW2021/master/assets/ZeusSarmiento.jpeg">
