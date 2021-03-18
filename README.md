@@ -14,7 +14,7 @@
 
 <ul>
 <li>Kirbey Aldair Garcia Hernandez</li>
-<li>Shirla Pamela Santana Pérez</li>
 <li>Oscar Omar Perera Perez</li>
+<li>Shirla Pamela Santana Pérez</li>
 <li>Zeus Jhonatan Sarmiento Serrano</li>
 </ul>
