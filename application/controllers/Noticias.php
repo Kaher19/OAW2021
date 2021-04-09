@@ -33,7 +33,7 @@ class Noticias extends CI_Controller{
             $content = file_get_contents($url->url);
             $xmlElement = new SimpleXmlElement($content);
             foreach($xmlElement->channel->item as $entry) {
-                //Esta parte es para incluir todas las categorias en caso de tener mas de una.
+                //Este fragmento es para incluir todas las categorias en caso de tener mas de una.
                 $categories = $entry->category;
                 if(count($entry->category)>1){
                     $categories = '';
@@ -42,11 +42,8 @@ class Noticias extends CI_Controller{
                     }
                     $categories = trim($categories, ', ');
                 }
-                
-                //echo(date("Y-M-d H:i:s", strtotime($entry->pubDate))) . ' / ';
-                //var_dump($entry);
                 if(!$this->existeLaNoticia($entry->link))
-                $this->noticias_model->guardarNoticia(date("Y-M-d H:i:s", strtotime($entry->pubDate)), $entry->title, $entry->link, $entry->description, $categories);
+                $this->noticias_model->guardarNoticia(date('Y-m-d H:i:s', strtotime($entry->pubDate)), $entry->title, $entry->link, $entry->description, $categories);
             }
         }
         $this->index();
