@@ -40,6 +40,7 @@ class Noticias extends CI_Controller{
                     foreach($entry->category as $category){
                         $categories = $categories . $category.', ';
                     }
+                    $categories = trim($categories, ', ');
                 }
                 
                 //echo(date("Y-M-d H:i:s", strtotime($entry->pubDate))) . ' / ';
