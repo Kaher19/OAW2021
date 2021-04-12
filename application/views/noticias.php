@@ -19,15 +19,15 @@
     <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
 </head>  
 <body>  
-    <section>
-        <form id="actualizar" method="post" action="<?php echo base_url(); ?>index.php/noticias/agregarFeed">
-            <input name="url" class="form-control" type="text" required="required" placeholder="www.url_del_feed.com">
-            <input class="btn btn-success btn-sm" type="submit" value="Agregar Feed">  
-        </form>
-        <h3>Noticias</h3><br>
+    <section class="content">
+        <form id="agregarURL" method="post" action="<?php echo base_url(); ?>index.php/noticias/agregarFeed">
+            <input id="urlInput" name="url" class="form-control" type="text" required="required" placeholder="www.url_del_feed.com">
+            <input id="urlBtn" class="btn btn-success btn-sm" type="submit" value="Agregar Feed">  
+        </form><br>
         <form id="listaNoticias" method="post" action="<?php echo base_url(); ?>index.php/noticias/verNoticia">
+            <img id="banner" src="<?php echo base_url(); ?>assets/img/banner.jpg"><br>    
             <input class="form-control" type="text" id="filtro" placeholder="Filtrar...">
-            <table class="table table-striped table-bordered table-responsive tablesorter" id="lista">
+            <table class="table table-bordered table-responsive tablesorter" id="lista">
                 <thead>
                     <tr>
                         <th>Fecha</th>
@@ -61,7 +61,7 @@
             <input type="hidden" name="id" id="id">
         </form>
         <form id="actualizar" method="get" action="<?php echo base_url(); ?>index.php/noticias/actualizar">
-            <input class="btn btn-primary btn-sm" type="submit" value="Actualizar Noticias">  
+            <input class="btn btn-primary btn-sm" type="submit" value="Actualizar Noticias">
         </form>
     </section> 
 </body>  
