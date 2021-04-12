@@ -42,8 +42,9 @@ class Noticias extends CI_Controller{
                     }
                     $categories = trim($categories, ', ');
                 }
-                if(!$this->existeLaNoticia($entry->link))
-                $this->noticias_model->guardarNoticia(date('Y-m-d H:i:s', strtotime($entry->pubDate)), $entry->title, $entry->link, $entry->description, $categories);
+                if(!$this->existeLaNoticia($entry->link)){
+                    $this->noticias_model->guardarNoticia(date('Y-m-d H:i:s', strtotime($entry->pubDate)), $entry->title, $entry->link, $entry->description, $categories);
+                }
             }
         }
         $this->index();
@@ -53,7 +54,9 @@ class Noticias extends CI_Controller{
         $this->load->model('noticias_model');
         $lista_noticias = $this->noticias_model->getNoticias();
         foreach($lista_noticias->result() as $noticia){
-            if($noticia->url == $urlNoticia) return true;
+            if($noticia->url == $urlNoticia){
+                return true;
+            }
         }
         return false;
     }

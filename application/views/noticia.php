@@ -14,14 +14,19 @@
 </head>  
 <body>  
     <section>
-        <h3><?php echo $noticia->titulo;?></h3><br>
-        <p><?php echo $noticia->fecha;?></p>
-        <p><?php echo $noticia->descripcion;?></p>
-        <p><?php echo $noticia->url;?></p>
-        <p><?php echo $noticia->categorias;?></p>
-        <form method="get" action="<?php echo base_url(); ?>index.php/noticias/index">  
-            <input class="btn btn-dark btn-sm" type="submit" value="Volver al Inicio">  
-        </form>
+        <div id="infoNoticia">
+            <img id="banner" src="<?php echo base_url(); ?>assets/img/banner.jpg"><br> 
+            <h2><?php echo $noticia->titulo;?></h2><br>
+            <i id="fecha"><?php echo $noticia->fecha;?></i><br><br>
+            <div id="divDescrip">
+                <p id="descrip"><?php echo $noticia->descripcion;?></p><br>
+            </div>
+            <u id="urlNoticia"><?php echo $noticia->url;?></u><br><br>
+            <i id="categorias"><u><?php echo $noticia->categorias;?></u></i><br><br><br>
+            <form method="get" action="<?php echo base_url(); ?>index.php/noticias/index">  
+                <input class="btn btn-primary btn-sm" type="submit" value="Volver al Inicio">  
+            </form>
+        </div>
     </section> 
 </body>  
 </html>

@@ -1,0 +1,95 @@
+body{
+    background: url('../../assets/img/background.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.content{
+    width: 90%!important;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#agregarURL{
+    margin: 20px auto;
+    align-items: center;
+    display: flex;
+    width: 60%;
+}
+
+#actualizar{
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#banner{
+    width: 800px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+#urlBtn{
+    margin: 10px;
+}
+
+#listaNoticias{
+    text-align: center;
+}
+
+#filtro{
+    margin: 15px;
+}
+
+.table{
+    color: white!important; 
+    margin: auto;
+    width: 100%!important;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.80);
+    background-color: rgba(0,0,0,.8);
+    border-radius: 15px;
+    text-align: justify;
+}
+
+.table tr:hover{
+    background-color: black ;
+}
+
+.table tr th{
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border:0;
+}
+
+.table tr td{
+    text-align: center;
+    border: 10;
+}
+
+#infoNoticia{
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#categorias{
+    float: right;
+}
+
+#urlNoticia{
+    float: left;
+}
+
+#fecha{
+    float: right;
+}
+
+#divDescrip{
+    width: 80%;
+    margin: 0 auto;
+}
