@@ -11,13 +11,6 @@ body{
     padding: 10px;
 }
 
-#agregarURL{
-    margin: 20px auto;
-    align-items: center;
-    display: flex;
-    width: 60%;
-}
-
 #actualizar{
     margin: 20px;
     align-items: center;
@@ -33,15 +26,11 @@ body{
 }
 
 #urlBtn{
-    margin: 10px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 #listaNoticias{
     text-align: center;
-}
-
-#filtro{
-    margin: 15px;
 }
 
 .table{
