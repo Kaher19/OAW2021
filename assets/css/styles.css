@@ -2,7 +2,6 @@ body{
     background: url('../../assets/img/fondo.jpg');
     color: white;
     font-size: 12px;
-    background-repeat:no-repeat;
     background-size: 100%;
 }
 
@@ -24,6 +23,23 @@ body{
     width: 20px;
     height: 20px;
     color: white;
+}
+
+.dropdown-icon{
+    width: 10px;
+    height: 10px;
+}
+
+.anioBtn{
+    margin-left: 20px;
+}
+
+.mesBtn{
+    margin-left: 40px;
+}
+
+.diaBtn{
+    margin-left: 60px;
 }
 
 #banner{
