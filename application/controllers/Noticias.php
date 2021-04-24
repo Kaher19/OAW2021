@@ -10,14 +10,6 @@ class Noticias extends CI_Controller{
         $this->load->view('noticias', $data); 
     }
 
-    function verNoticia(){
-        $this->load->model('noticias_model');
-        $id = $this->input->post('id');
-        $detallesNoticia = $this->noticias_model->getDatosNoticia($id);
-        $data['noticia'] = $detallesNoticia->row();
-        $this->load->view('noticia', $data); 
-    }
-
     function agregarFeed(){
         $this->load->model('noticias_model');
         $url = $this->input->post('url');

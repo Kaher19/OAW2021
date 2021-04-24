@@ -25,18 +25,13 @@
     <section class="content container-fluid">
         <img class="row" id="banner" src="<?php echo base_url(); ?>assets/img/banner.jpg"><br>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <form id="actualizar" method="get" action="<?php echo base_url(); ?>index.php/noticias/actualizar">
-                    <input class="btn btn-primary btn-sm" type="submit" value="Actualizar Noticias">
-                </form>
-                <form id="agregarURL" class="input-group mb-3" method="post" action="<?php echo base_url(); ?>index.php/noticias/agregarFeed">
-                    <input id="urlInput" name="url" class="form-control col-12" type="text" required="required" placeholder="www.url_del_feed.com" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button id="urlBtn" class="btn btn-success" type="submit" value="Agregar Feed">Agregar Feed</button>
-                    </div>
-                </form>
-                
-                <input class="form-control mb-3" type="text" id="filtro" placeholder="Filtrar...">
+                    <button class="btn btn-primary btn-sm" type="submit">
+                        <a>Actualizar Noticias</a>
+                        <img id="iconoActualizar" src="<?php echo base_url(); ?>assets/img/actualizar.svg" alt="">
+                    </button>
+                </form><br>
                 
                 <div id="menu" class="list-group mb-3">
                     <button id="anioMenu" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseAnio" aria-expanded="false" aria-controls="collapseAnio">Año</button>
@@ -69,20 +64,23 @@
                         <a href="#" class="list-group-item list-group-item-action">Jueves</a>
                         <a href="#" class="list-group-item list-group-item-action">Viernes</a>
                         <a href="#" class="list-group-item list-group-item-action">Sábado</a>
-                    </div>
+                    </div><br><br>
                 </div>
+                <form id="agregarURL" class="input-group mb-3" method="post" action="<?php echo base_url(); ?>index.php/noticias/agregarFeed">
+                    <input id="urlInput" name="url" class="form-control col-12" type="text" required="required" placeholder="www.url_del_feed.com" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button id="urlBtn" class="btn btn-success" type="submit" value="Agregar Feed">
+                            <a>Agregar Feed</a>
+                            <img id="iconoActualizar" src="<?php echo base_url(); ?>assets/img/agregarFeed.svg" alt="">
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <form id="listaNoticias" method="post" action="<?php echo base_url(); ?>index.php/noticias/verNoticia">
                     <table class="table table-bordered table-responsive tablesorter" id="lista">
                         <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Título</th>
-                                <!-- <th>Descripción</th> -->
-                                <th>URL</th>
-                                <th>Categorías</th>
-                            </tr>
+                            <tr><input class="form-control mb-3" type="text" id="filtro" placeholder="Filtrar..."></tr>
                         </thead>
                         <tbody>
                             <?php
@@ -91,12 +89,14 @@
                                     foreach ($noticias->result() as $noticia) {
                             ?>
                                         <tr>
-                                            <td name="fecha"><?php echo $noticia->fecha; ?></td>
-                                            <td name="titulo"><?php echo $noticia->titulo; ?></td>
-                                            <!-- <td name="descripcion"><?php echo $noticia->descripcion; ?></td> -->
-                                            <td name="url"><?php echo $noticia->url; ?></td>
-                                            <td name="categorias"><?php echo $noticia->categorias; ?></td>
-                                            <td><input id="<?php echo $noticia->id; ?>" class="btn btn-success btn-sm" type="button" value="Leer Más">
+                                            <td>
+                                                <h5><?php echo $noticia->titulo; ?></h5>
+                                                <p class="descripciones"><?php echo $noticia->descripcion; ?></p><br>
+                                                <i class="urls"><?php echo $noticia->url; ?></i><br><br><br><br>
+                                                <u class="fechas"><?php echo $noticia->fecha; ?></u>
+                                                <b class="categorias"><?php echo $noticia->categorias; ?></b>
+                                                <input id="<?php echo $noticia->id; ?>" class="btn btn-success btn-sm" type="hidden" value="Leer Más">
+                                            </td> 
                                         </tr>
                             <?php
                                     }

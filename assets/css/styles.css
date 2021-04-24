@@ -1,7 +1,9 @@
 body{
-    background: url('../../assets/img/background.jpg');
-    background-size: cover;
+    background: url('../../assets/img/fondo.jpg');
     color: white;
+    font-size: 12px;
+    background-repeat:no-repeat;
+    background-size: 100%;
 }
 
 .content{
@@ -18,33 +20,65 @@ body{
     display: flex;
 }
 
+#iconoActualizar{
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
 #banner{
-    width: 800px;
-    height: 100px;
+    width: 600px;
+    height: 80px;
     border-radius: 5px;
     margin: 10px auto;
 }
 
 #urlBtn{
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 5px;
+    margin: 20px;
 }
 
 #listaNoticias{
     text-align: center;
 }
 
+#lista{
+    max-height: 400px;
+    overflow: scroll;
+}
+
+#menu{
+    max-width: 200px;
+}
+
+.descripciones{
+    float: left;
+}
+
+.urls{
+    float: left;
+}
+
+.categorias{
+    float: right;
+}
+
+.fechas{
+    float: left;
+}
+
 .table{
     color: white!important; 
     margin: auto;
     width: 100%!important;
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.80);
-    background-color: rgba(0,0,0,.8);
+    box-shadow: 0px 0px 25px 0px #0D265E;
+    background-color: #0D265E;
     border-radius: 15px;
     text-align: justify;
 }
 
 .table tr:hover{
-    background-color: black ;
+    background-color: #133072;
 }
 
 .table tr th{
