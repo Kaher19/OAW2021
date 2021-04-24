@@ -10,15 +10,11 @@
     <meta content="" name="keywords">
 
     <link href="<?php echo base_url(); ?>assets/img/favicon.png" rel="icon">
-    <!-- <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="<?php echo base_url(); ?>assets/css/theme.default.css" rel="stylesheet"> -->
     <link href="<?php echo base_url(); ?>assets/css/styles.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/jquery.tablesorter.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/filtro.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
 </head>
 
 <body>
@@ -33,51 +29,55 @@
                     </button>
                 </form><br>
 
-                <div id="menuAnio" class="list-group mb-3">
-                    <button id="anio-2021" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2021" aria-expanded="false" aria-controls="collapse-2021">2021</button>
-                    <div id="collapse-2021" class="collapse" aria-labelledby="anio-2021" data-parent="#menuAnio">
-                        <div id="menuMes-2021" class="list-group">
-                            <button id="mes-2021-Enero" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2021-Enero" aria-expanded="false" aria-controls="collapse-2021-Enero">Enero</button>
-                            <div id="collapse-2021-Enero" class="collapse" aria-labelledby="mes-2021-Enero" data-parent="#menuMes-2021">
-                                <div id="menuDia" class="list-group">
-                                    <button id="dia-2021-Enero-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
-                                    <button id="dia-2021-Enero-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
-                                    <button id="dia-2021-Enero-Miercoles" type="button" class="list-group-item list-group-item-action">Miercoles</button>
+                <div id="menuDate" class="list-group mb-2">
+                    <button id="anios" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-anios" aria-expanded="false" aria-controls="collapse-anios">
+                        <a>Elegir Fecha</a>
+                        <img class="dropdown-icon" src="<?php echo base_url(); ?>assets/img/dropdown.svg" alt="">
+                    </button>
+                    <div id="collapse-anios" class="collapse" aria-labelledby="anio" data-parent="#menuDate">
+                        <div id="menuAnio" class="list-group">
+                            <?php
+                            for($i=2021; $i>=2019; $i--){
+                            ?>
+                                <button id="anio-<?php echo $i;?>" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $i; ?>">
+                                    <a class="anioBtn"><?php echo $i;?></a>
+                                    <img class="dropdown-icon" src="<?php echo base_url(); ?>assets/img/dropdown.svg" alt="">
+                                </button>
+                                <div id="collapse-<?php echo $i;?>" class="collapse" aria-labelledby="anio-<?php echo $i;?>" data-parent="#menuAnio">
+                                    <div id="menuMes-<?php echo $i;?>" class="list-group">
+                                        <?php
+                                        for($j=1; $j<=12; $j++){
+                                            $j<10? $mes="0$j" : $mes = "$j";
+                                        ?>
+                                            <button id="mes-<?php echo "$i-$j";?> type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target='#collapse-<?php echo "$i-$j"?>' aria-expanded="false" aria-controls='collapse-<?php echo "$i-$j"?>'>
+                                                <a class="mesBtn"><?php echo $mes;?></a>
+                                                <img class="dropdown-icon" src="<?php echo base_url(); ?>assets/img/dropdown.svg" alt="">
+                                            </button>
+                                            <div id='collapse-<?php echo "$i-$j"?>' class="collapse" aria-labelledby='mes-<?php echo "$i-$j"?>' data-parent='#menuMes-<?php echo $i;?>'>
+                                                <div id="menuDia" class="list-group">
+                                                    <?php
+                                                    for($k=1; $k<=31; $k++){
+                                                        $k<10? $dia="0$k" : $dia = "$k";
+                                                    ?>
+                                                        <button onclick='filterByDate(<?php echo $i.", ".$mes.", ".$dia;?>)' id='dia-<?php echo "$i-$j-$k";?>' type="button" class="list-group-item list-group-item-action">
+                                                            <a class="diaBtn"><?php echo $dia;?></a>
+                                                        </button>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
-                            </div>
-                            <button id="mes-2021-Febrero" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2021-Febrero" aria-expanded="false" aria-controls="collapse-2021-Febrero">Febrero</button>
-                            <div id="collapse-2021-Febrero" class="collapse" aria-labelledby="mes-2021-Febrero" data-parent="#menuMes-2021">
-                                <div id="menuDia" class="list-group">
-                                    <button id="dia-2021-Febrero-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
-                                    <button id="dia-2021-Febrero-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
-                                    <button id="dia-2021-Febrero-Miercoles" type="button" class="list-group-item list-group-item-action">Miercoles</button>
-                                </div>
-                            </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
-
-                    <button id="anio-2020" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2020" aria-expanded="false" aria-controls="collapse-2020">2020</button>
-                    <div id="collapse-2020" class="collapse" aria-labelledby="anio-2020" data-parent="#menuAnio">
-                        <div id="menuMes-2020" class="list-group">
-                            <button id="mes-2020-Enero" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2020-Enero" aria-expanded="false" aria-controls="collapse-2020-Enero">Enero</button>
-                            <div id="collapse-2020-Enero" class="collapse" aria-labelledby="mes-2020-Enero" data-parent="#menuMes-2020">
-                                <div id="menuDia" class="list-group">
-                                    <button id="dia-2020-Enero-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
-                                    <button id="dia-2020-Enero-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
-                                    <button id="dia-2020-Enero-Miercoles" type="button" class="list-group-item list-group-item-action">Miercoles</button>
-                                </div>
-                            </div>
-                            <button id="mes-2020-Marzo" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2020-Marzo" aria-expanded="false" aria-controls="collapse-2020-Marzo">Marzo</button>
-                            <div id="collapse-2020-Marzo" class="collapse" aria-labelledby="mes-2020-Marzo" data-parent="#menuMes-2020">
-                                <div id="menuDia" class="list-group">
-                                    <button id="dia-2020-Marzo-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
-                                    <button id="dia-2020-Marzo-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
-                                    <button id="dia-2020-Marzo-Miercoles" type="button" class="list-group-item list-group-item-action">Miercoles</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div><br><br>
                 <form id="agregarURL" class="input-group mb-3" method="post" action="<?php echo base_url(); ?>index.php/noticias/agregarFeed">
                     <input id="urlInput" name="url" class="form-control col-12" type="text" required="required" placeholder="www.url_del_feed.com" aria-describedby="basic-addon2">
                     <div class="input-group-append">
