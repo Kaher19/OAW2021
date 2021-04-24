@@ -36,9 +36,9 @@
                 <div id="menuAnio" class="list-group mb-3">
                     <button id="anio-2021" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2021" aria-expanded="false" aria-controls="collapse-2021">2021</button>
                     <div id="collapse-2021" class="collapse" aria-labelledby="anio-2021" data-parent="#menuAnio">
-                        <div id="menuMes" class="list-group">
+                        <div id="menuMes-2021" class="list-group">
                             <button id="mes-2021-Enero" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2021-Enero" aria-expanded="false" aria-controls="collapse-2021-Enero">Enero</button>
-                            <div id="collapse-2021-Enero" class="collapse" aria-labelledby="mes-2021-Enero" data-parent="#menuMes">
+                            <div id="collapse-2021-Enero" class="collapse" aria-labelledby="mes-2021-Enero" data-parent="#menuMes-2021">
                                 <div id="menuDia" class="list-group">
                                     <button id="dia-2021-Enero-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
                                     <button id="dia-2021-Enero-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <button id="mes-2021-Febrero" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2021-Febrero" aria-expanded="false" aria-controls="collapse-2021-Febrero">Febrero</button>
-                            <div id="collapse-2021-Febrero" class="collapse" aria-labelledby="mes-2021-Febrero" data-parent="#menuMes">
+                            <div id="collapse-2021-Febrero" class="collapse" aria-labelledby="mes-2021-Febrero" data-parent="#menuMes-2021">
                                 <div id="menuDia" class="list-group">
                                     <button id="dia-2021-Febrero-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
                                     <button id="dia-2021-Febrero-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
@@ -58,9 +58,9 @@
 
                     <button id="anio-2020" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2020" aria-expanded="false" aria-controls="collapse-2020">2020</button>
                     <div id="collapse-2020" class="collapse" aria-labelledby="anio-2020" data-parent="#menuAnio">
-                        <div id="menuMes" class="list-group">
+                        <div id="menuMes-2020" class="list-group">
                             <button id="mes-2020-Enero" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2020-Enero" aria-expanded="false" aria-controls="collapse-2020-Enero">Enero</button>
-                            <div id="collapse-2020-Enero" class="collapse" aria-labelledby="mes-2020-Enero" data-parent="#menuMes">
+                            <div id="collapse-2020-Enero" class="collapse" aria-labelledby="mes-2020-Enero" data-parent="#menuMes-2020">
                                 <div id="menuDia" class="list-group">
                                     <button id="dia-2020-Enero-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
                                     <button id="dia-2020-Enero-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <button id="mes-2020-Marzo" type="button" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapse-2020-Marzo" aria-expanded="false" aria-controls="collapse-2020-Marzo">Marzo</button>
-                            <div id="collapse-2020-Marzo" class="collapse" aria-labelledby="mes-2020-Marzo" data-parent="#menuMes">
+                            <div id="collapse-2020-Marzo" class="collapse" aria-labelledby="mes-2020-Marzo" data-parent="#menuMes-2020">
                                 <div id="menuDia" class="list-group">
                                     <button id="dia-2020-Marzo-Lunes" type="button" class="list-group-item list-group-item-action">Lunes</button>
                                     <button id="dia-2020-Marzo-Martes" type="button" class="list-group-item list-group-item-action">Martes</button>
